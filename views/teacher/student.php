@@ -11,8 +11,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        This is the Student page. You may modify the following file to customize its content:
+        This is the Student page. You may modify the following file to customize its content: <br>
     </p>
 
+    <p>
+        <?=$test_controller_view?>
+    </p>
     <code><?= __FILE__ ?></code>
 </div>
