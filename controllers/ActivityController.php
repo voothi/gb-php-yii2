@@ -18,8 +18,9 @@ class ActivityController extends BaseController
 
 //      Проверка на валидацию
         if (!$activity->validate()) {
-            echo 'error valid';
-            exit;
+//            echo 'error valid';
+//            print_r($activity->getErrors());
+//            exit;
         }
 
 //      Наполняем значениями
