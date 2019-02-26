@@ -20,4 +20,13 @@ class Activity extends Model
             ['is_blocked', 'boolean'],
         ];
     }
+
+    function attributeLabels()
+    {
+        return [
+            'title' => 'Заголовок активности',
+            'description' => 'Описание',
+            'is_blocked' => 'Блокирующее',
+        ];
+    }
 }
