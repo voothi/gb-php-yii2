@@ -27,7 +27,7 @@ class ActivityController extends BaseController
         if (\Yii::$app->request->isPost) {
             $activity->load(\Yii::$app->request->post());
 
-            print_r($activity->getAttributes(['title']));
+            print_r($activity->setAttributes(['title' => 'new']));
 
             $activity->validate();
         }
