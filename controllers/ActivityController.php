@@ -16,16 +16,18 @@ class ActivityController extends BaseController
         $activity->is_blocked = true;
         $activity->title = '1';
 
-//      Проверка на валидацию
+/*//      Проверка на валидацию
         if (!$activity->validate()) {
 //            echo 'error valid';
 //            print_r($activity->getErrors());
 //            exit;
-        }
+        }*/
 
 //      Наполняем значениями
         if (\Yii::$app->request->isPost) {
             $activity->load(\Yii::$app->request->post());
+
+            print_r($activity->getAttributes());
 
             $activity->validate();
         }
