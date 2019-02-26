@@ -18,7 +18,7 @@ use yii\bootstrap\ActiveForm;
             ]
         ]); ?>
         <?= $form->field($activity, 'title'); ?>
-        <?= $form->field($activity, 'description',['template' => "{input}\n{label}"])->textarea(['class'=>'custom form-control']); ?>
+        <?= $form->field($activity, 'description')->textarea(['class'=>'custom form-control']); ?>
         <?= $form->field($activity, 'is_blocked')->checkbox(); ?>
 
         <div class="form-group">

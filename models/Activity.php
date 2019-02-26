@@ -26,7 +26,7 @@ class Activity extends Model
         return [
             'title' => 'Заголовок активности',
             'description' => 'Описание',
-            'is_blocked' => 'Блокирующее',
+            'is_blocked' => 'Блокировано',
         ];
     }
 }
