@@ -13,15 +13,12 @@ use yii\bootstrap\ActiveForm;
             'action' => '',
             'method' => 'POST',
             'id' => 'activity',
-            'fieldConfig' => [
-                'template' => "{input} \n {label}"
-            ],
             'options' => [
                 'enctype' => ''
             ]
         ]); ?>
         <?= $form->field($activity, 'title'); ?>
-        <?= $form->field($activity, 'description')->textarea(['class'=>'custom form-control']); ?>
+        <?= $form->field($activity, 'description',['template' => "{input}\n{label}"])->textarea(['class'=>'custom form-control']); ?>
         <?= $form->field($activity, 'is_blocked')->checkbox(); ?>
 
         <div class="form-group">
