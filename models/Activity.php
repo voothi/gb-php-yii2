@@ -15,7 +15,7 @@ class Activity extends Model
     function rules()
     {
         return [
-            ['title', 'string', 'max' => 150],
+            ['title', 'string', 'min' => '2' ,'max' => 150],
             [['title', 'date_start'], 'required'],
             ['is_blocked', 'boolean'],
         ];
