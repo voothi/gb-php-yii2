@@ -13,6 +13,9 @@ use yii\bootstrap\ActiveForm;
             'action' => '',
             'method' => 'POST',
             'id' => 'activity',
+            'fieldConfig' => [
+                'template' => "{input} \n {label}"
+            ],
             'options' => [
                 'enctype' => ''
             ]
