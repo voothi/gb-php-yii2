@@ -8,11 +8,9 @@ use yii\base\Action;
 
 class ActivityCreateAction extends Action
 {
-    public $my_name;
-
     public function run()
     {
-        $activity = new Activity();
+        $activity = \Yii::$app->activity->getModel();
 
         if (\Yii::$app->request->isPost) {
             $activity->load(\Yii::$app->request->post());

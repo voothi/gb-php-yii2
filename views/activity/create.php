@@ -8,7 +8,7 @@ use yii\bootstrap\ActiveForm;
 <div class='row'>
     <div class="col-md-6">
         <h2>Создание новой ак тивности</h2>
-        <?= Yii::getAlias('@my_alias'); ?>
+        <?= Yii::getAlias('@new'); ?>
         <?php $form=ActiveForm::begin([
             'action' => '',
             'method' => 'POST',
