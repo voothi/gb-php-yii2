@@ -32,4 +32,13 @@ class ActivityComponent extends Component
 
         return $model;
     }
+
+    /**
+     * @param $model
+     * @return bool
+     */
+    public function createActivity ($model)
+    {
+        return $model->validate();
+    }
 }
