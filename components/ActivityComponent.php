@@ -20,8 +20,16 @@ class ActivityComponent extends Component
     /**
      * @return Activity
      */
-    public function getModel()
+    public function getModel($params=null)
     {
-        return new $this->activity_class;
+        /**
+         * @var Activity $model
+         */
+        $model =  new $this->activity_class;
+        if ($params && is_array($params)) {
+            $model->load($params);
+        }
+
+        return $model;
     }
 }

@@ -8,14 +8,18 @@ use yii\base\Action;
 
 class ActivityCreateAction extends Action
 {
+    /**
+     * @return string
+     */
     public function run()
     {
-        $activity = \Yii::$app->activity->getModel();
 
         if (\Yii::$app->request->isPost) {
-            $activity->load(\Yii::$app->request->post());
+            $activity = \Yii::$app->activity->getModel(\Yii::$app->request->post());
 
             $activity->validate();
+        } else {
+            $activity = \Yii::$app->activity->getModel();
         }
 
         return $this->controller->render('create', ['activity' => $activity]);
