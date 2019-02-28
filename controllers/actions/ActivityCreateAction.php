@@ -19,7 +19,10 @@ class ActivityCreateAction extends Action
          */
         if (\Yii::$app->request->isPost) {
             /** @var ActivityComponent $comp */
-            $comp = \Yii::$app->activity;
+            $comp = \Yii::createObject([
+                'class' => ActivityComponent::class,
+                'activity_class' => Activity::class
+            ]);
             $activity = $comp->getModel(\Yii::$app->request->post());
             $comp->createActivity($activity);
         } else {
