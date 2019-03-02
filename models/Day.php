@@ -3,8 +3,9 @@
 
 namespace app\models;
 
+use yii\web\Controller;
 
-class Day
+class Day extends Controller
 {
 
 }
